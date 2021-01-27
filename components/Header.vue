@@ -41,6 +41,7 @@
             <NuxtLink to="/fun" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Fun </NuxtLink>
             <NuxtLink :to="'/about/'+2" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Id</NuxtLink>
             <NuxtLink :to="'/about/'+ slug" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Slug</NuxtLink>
+             <NuxtLink :to="'/product'" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Product</NuxtLink>
           </div>
         </div>
       </div>
