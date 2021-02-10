@@ -44,7 +44,7 @@ auth: {
       local: {
       token: {
         property: 'token',
-        maxAge: 1800
+        maxAge: 3600
       },
       user: {
         property: false 
