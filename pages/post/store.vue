@@ -32,6 +32,7 @@
 
 <script>
 export default {
+middleware: 'auth',
   data() {
     return {
       editedItem: 
@@ -55,11 +56,12 @@ export default {
 					});
 					if (data) 
 					{
-                        console.log('saved')
+              this.$notify.success({title: 'Hooray',message: 'I am using iziToast!', color: 'green',})
+
 					} 
 					else 
 					{
-                        console.log('saved')
+              this.$notify.success({title: 'Hooray',message: 'I am using iziToast!'})
 					}
 				} catch (e) {
 					this.loading = false;

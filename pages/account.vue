@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Name: {{ $auth.user.data.email}}</p>
+    <p>Name: {{ $auth.user.email}}</p>
   </div>
 </template>
 

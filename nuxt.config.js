@@ -35,8 +35,19 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+  'nuxt-izitoast',
   ],
+izitoast: {
+    position: 'topRight',
+    transitionIn: 'bounceInLeft',
+    transitionOut: 'fadeOutRight',
+overlayColor: 'rgba(11, 0, 0, 0.6)',
+theme: 'light', //dark,
+ zindex: 5,
+// color: 'green', // blue, red, green, yellow
+  }
+,
 auth: {
     login: '/login',
     logout: '/',
@@ -52,7 +63,7 @@ auth: {
         endpoints: {
           login: {url:'/login', method: 'post', propertyName: 'token'},
           logout: {url: '/logout', method: 'post', },
-          user: {url: '/posts', method: 'get', propertyName: 'false'},
+          user: {url: '/users', method: 'get', propertyName: 'false'},
         },
         tokenRequired: true,
         tokenType: 'Bearer',

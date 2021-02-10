@@ -13,7 +13,8 @@
     "@nuxtjs/auth-next": "5.0.0-1611574754.9020f2a",
     "@nuxtjs/pwa": "^3.3.4",
     "core-js": "^3.8.2",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-izitoast": "^1.0.0"
   },
   "devDependencies": {
     "@nuxtjs/axios": "^5.13.0",
