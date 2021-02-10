@@ -41,9 +41,10 @@
             <NuxtLink to="/fun" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Fun </NuxtLink>
             <NuxtLink :to="'/about/'+2" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Id</NuxtLink>
             <NuxtLink :to="'/about/'+ slug" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Slug</NuxtLink>
-             <NuxtLink :to="'/product'" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Product</NuxtLink>
-  <NuxtLink :to="'/account'" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Account</NuxtLink>         
- </div>
+            <NuxtLink :to="'/product'" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Product</NuxtLink>
+            <NuxtLink :to="'/account'" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Account</NuxtLink>     
+            <NuxtLink :to="'/post'" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Post Data</NuxtLink>    
+        </div>
         </div>
       </div>
       <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

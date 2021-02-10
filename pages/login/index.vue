@@ -10,7 +10,6 @@
           type="email"
           v-model="login.email"
           class="w-full border rounded px-3 py-2"
-          required
         />
       </div>
       <div class="mb-4">
@@ -19,7 +18,6 @@
           type="password"
          v-model="login.password"
           class="w-full border rounded px-3 py-2"
-          required
         />
       </div>
       <button
@@ -44,10 +42,10 @@ export default {
   },
   methods: {
      async userLogin() {
-      try {
-       this.$auth.loginWith('local', { data: this.login })
-        // console.log(response)
-      this.$router.push('/')
+      try 
+      {
+        this.$auth.loginWith('local', { data: this.login })
+        this.$router.push('/')
       } catch (err) {
         console.log(err)
       }
