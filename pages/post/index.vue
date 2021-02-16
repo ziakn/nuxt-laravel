@@ -28,7 +28,22 @@ export default {
 	},
 	data: () => ({
 		dataList: [],
+
 	}),
+ 	
+	head() {
+      return {
+        title: 'zia description',
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'zia description',
+            name: 'zia  description',
+            content: ' zia My custom description'
+          }
+        ]
+      }
+    },
 
 	props: 
 	{
@@ -46,21 +61,43 @@ export default {
 	},
 	
 	watch: {},
+	async  fetch () 
+		{
+			// this.start();
+			try 
+			{
+				let { data } = await this.$axios({
+					method: "get",
+					url: "/posts",
+				});
+				this.dataList = data.data;
+			} 
+			catch (e) 
+			{
+				// this.fail();
+			}
+			finally
+			{
+				// this.finish();
+			}
+		},
 
-	mounted() 
+	created() 
 	{
-		this.initialize();
+		
 	},
+
+	
 	
 	methods: {
 		
 
-		async initialize() 
+		 initialize() 
 		{
-			this.getOrder();  
+			// this.getOrder();
 		},
 
-		async getOrder()
+		async  getOrder()
 		{
 			// this.start();
 			try 
