@@ -69,7 +69,7 @@
             <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
-                        <a class="text-xl font-bold text-gray-800 dark:text-white md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Brand</a>
+                        <a class="text-xl font-bold text-gray-800 dark:text-white md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Al-Sharq Technology</a>
 
                         <!-- Search input on desktop screen -->
                         <div class="hidden mx-10 md:block">
