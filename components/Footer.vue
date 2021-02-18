@@ -1,8 +1,8 @@
 <template>
         <footer class="px-6 py-2 bg-gray-700 text-gray-100 ">
-      <div
-        class="flex flex-col justify-between items-center container mx-auto md:flex-row"
-      >
+        <div
+            class="flex flex-col justify-between items-center container mx-auto md:flex-row"
+        >
         <a href="#" class="text-2xl font-bold">Brand</a>
         <p class="mt-2 md:mt-0">All rights reserved 2020.</p>
         <div class="flex -mx-2 mt-4 mb-2 md:mt-0 md:mb-0">
