@@ -17,7 +17,7 @@
             <div class="w-full lg:max-w-full lg:flex">
               <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
                 style=" background-image: url('https://picsum.photos/600/400/?random');" title="Mountain"></div>
-              <div class="border-gray-400 lg:border-l  lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+              <div class="border-gray-400   lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                 <div class="mb-4">
                   <p class="text-sm text-gray-600 flex items-center">
                     <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
@@ -56,7 +56,7 @@
             <div class=" w-full lg:max-w-full lg:flex">
               <!-- <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://picsum.photos/600/400/?random')" title="Mountain">
               </div> -->
-              <div class="  border-gray-400 lg:border-l lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+              <div class="  border-gray-400  lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                 <div class="mb-4" >
                   <p class="text-sm text-gray-600 flex items-center">
                     <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
