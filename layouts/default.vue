@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div class="container my-12 mx-auto px-4 md:px-12">
+    <div class="container shadow-lg mx-auto bg-white md:mt-40 h-screen">
       <Nuxt />
     </div>
   </div>

@@ -64,8 +64,8 @@
 </nav>
 </div> -->
     <!-- Require css -->
-    <nav class="bg-white shadow dark:bg-gray-800">
-        <div class="container px-6 py-3 mx-auto">
+    <nav class="bg-white shadow-md dark:bg-gray-800  p-2 mt-0 fixed w-full z-10 top-0 h-auto">
+        <div class="container px-6 py-3 mx-auto ">
             <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
@@ -141,10 +141,10 @@
                 <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">Mysql</a>
                 <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">Pest</a>
                 <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">PHPUnit</a>
-                <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">Netlify</a>
+                <!-- <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">Netlify</a>
                 <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">VS Code</a>
                 <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">PHPStorm</a>
-                <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">Sublime</a>
+                <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" href="#">Sublime</a> -->
             </div>
         </div>
     </nav>
