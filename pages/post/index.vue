@@ -63,7 +63,7 @@ export default {
 	watch: {},
 	async  fetch () 
 		{
-			// this.start();
+			
 			try 
 			{
 				let { data } = await this.$axios({
