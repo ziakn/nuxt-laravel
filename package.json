@@ -20,6 +20,7 @@
   "devDependencies": {
     "@nuxtjs/axios": "^5.13.0",
     "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/vuetify": "^1.11.3",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1"

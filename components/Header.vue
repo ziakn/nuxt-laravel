@@ -1,13 +1,12 @@
 <template>
 
-    <nav class="bg-white shadow-md dark:bg-gray-800  p-2 mt-0 fixed w-full z-10 top-0 h-auto">
+    <!-- <nav class="bg-white shadow-md dark:bg-gray-800  p-2 mt-0 fixed w-full z-10 top-0 h-auto">
         <div class="container px-6 py-3 mx-auto ">
             <div class="flex flex-col md:flex-row md:justify-between md:items-center">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
                         <a class="text-xl font-bold text-gray-800 dark:text-white md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Al-Sharq Technology</a>
 
-                        <!-- Search input on desktop screen -->
                         <div class="hidden mx-10 md:block">
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -21,7 +20,6 @@
                         </div>
                     </div>
 
-                    <!-- Mobile menu button -->
                     <div class="flex md:hidden">
                         <button type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
                             <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
@@ -31,7 +29,6 @@
                     </div>
                 </div>
 
-                <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                 <div class="items-center md:flex">
                     <div class="flex flex-col mt-2 md:flex-row md:mt-0 md:mx-1">
                         <a class="my-1 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:mx-4 md:my-0" href="#">Home</a>
@@ -45,7 +42,6 @@
                         <a class="block w-1/2 px-3 py-2 mx-1 text-sm font-medium leading-5 text-center text-white transition-colors duration-200 transform bg-blue-500 rounded hover:bg-blue-600 md:mx-0 md:w-auto" href="#">Join free</a>
                     </div>
 
-                    <!-- Search input on mobile screen -->
                     <div class="mt-3 md:hidden">
                         <div class="relative">
                             <span class="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -64,7 +60,34 @@
                 <a class="mx-4 text-sm leading-5 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400 hover:underline md:my-0" v-for="(data,index) in dataList" :key="index">{{data.title}}</a>
             </div>
         </div>
-    </nav>
+    </nav> -->
+<v-app-bar      color="white lighten-4"  app>
+      <v-toolbar-title class="ml-2">
+        Al Sharq Technology
+      </v-toolbar-title>
+        <v-text-field 
+        class="ml-2"
+        hide-details
+        flat
+        rounded
+        outlined
+        dense
+        label="Search"
+        ></v-text-field>
+  <v-spacer></v-spacer>
+  <v-button class="ml-4 mr-4">
+        Home
+      </v-button>
+<v-button class="ml-4 mr-4">
+        Blog
+      </v-button>
+<v-button class="ml-4 mr-4">
+        Componennt
+      </v-button>
+<v-button class="ml-4 mr-4">
+        courses
+      </v-button>
+    </v-app-bar>
 
 </template>
 

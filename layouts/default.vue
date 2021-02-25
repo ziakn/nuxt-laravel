@@ -1,11 +1,16 @@
 <template>
-  <div class="flex flex-col h-screen">
+  <v-app>
     <Header />
-    <div class="container shadow-lg mx-auto bg-white ">
+      <!-- Sizes your content based upon application components -->
+  <v-main>
+
+    <!-- Provides the application the proper gutter -->
+    <v-container fluid>
       <Nuxt />
-    </div>
+     </v-container>
+  </v-main>
 <Footer/>
-  </div>
+  </v-app>
 </template>
 <script>
 export default {}
