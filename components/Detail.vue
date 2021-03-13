@@ -13,10 +13,10 @@
       ></v-progress-linear>
     </template>
 
-    <v-img
+    <!-- <v-img
       height="250"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-    ></v-img>
+    ></v-img> -->
 
     <v-card-title>Cafe Badilico</v-card-title>
 

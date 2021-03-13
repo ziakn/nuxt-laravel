@@ -1,5 +1,5 @@
 <template>
-
+<div>
 <v-app-bar      color="white lighten-4"  app>
       <v-toolbar-title class="ml-2">
         Ze Zu Blog
@@ -14,20 +14,9 @@
         label="Search"
         ></v-text-field>
   <v-spacer></v-spacer>
-  <v-button class="ml-4 mr-4">
-        Home
-      </v-button>
-<v-button class="ml-4 mr-4">
-        Blog
-      </v-button>
-<v-button class="ml-4 mr-4">
-        Componennt
-      </v-button>
-<v-button class="ml-4 mr-4">
-        courses
-      </v-button>
-    </v-app-bar>
 
+    </v-app-bar>
+</div>
 </template>
 
 
