@@ -1,15 +1,17 @@
 <template>
-       <v-row justify="center">
-		 <v-col cols="2">
+      <v-container fluid>
+		 <v-row justify="center">
+	<v-col sm="12" lg="2" md="2">
 		<Category></Category>
         </v-col>
-        <v-col cols="6">
+    	<v-col sm="12" lg="6" md="6">
 		<Listing></Listing>
         </v-col>
-		<v-col cols="2">
+		<v-col sm="12" lg="2" md="2">
 		<Category></Category>
         </v-col>
-</v-row>
+ </v-row>
+     </v-container>
 </template>
 
 <script>

@@ -3,52 +3,27 @@
         <v-col cols="12">
 			 <v-card color="white lighten-4" class="mb-3" v-for="(data,index) in dataList" :key="index">
             <div class="d-flex flex-no-wrap justify-space-between">
-				 <v-avatar
-                class="ma-3"
-                size="125"
-                tile
-              >
+				      <v-avatar class="ma-3" size="125" tile v-if="data.image">
                 <v-img src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"></v-img>
               </v-avatar>
-			  
 			  <v-card-text>
 			<div>	{{data.created_at}}</div>
 			<p class="display-1 text--primary">
 			{{data.title}}
 			</p>
-			<p>You may find interesting facts, ideas, thoughts, and observations all day long and it's better to note them down as every thought is valuable. That's why we created this Notes Journal. This is a single list to add your points but what's interesting is a small enhancement that we added to it and that's MIND PALACE.</p>
 			<div class="text--primary">
-				<v-chip
-                    class="ml-2 mt-5"
-                    outlined
-                    rounded
-                    small
-                  >
-                    # START RADIO
-                  </v-chip>
-				  <v-chip
-                    class="ml-2 mt-5"
-                    outlined
-                    rounded
-                    small
-                  >
-                    # Tag
-                  </v-chip>
-				  <v-chip
-                    class="ml-2 mt-5"
-                    outlined
-                    rounded
-                    small
-                  >
-                    # Tag
-                  </v-chip>
-				  
+				<v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
+				<v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
+        <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
+        <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
+        <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
+        <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
+        <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
 			</div>
 			</v-card-text>
-             
             </div>
 			<v-divider></v-divider>
-               <v-card-actions>
+      <v-card-actions>
       <v-list-item class="grow">
         <v-list-item-avatar color="grey darken-3">
           <v-img
@@ -57,126 +32,34 @@
             src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
           ></v-img>
         </v-list-item-avatar>
-
         <v-list-item-content>
           <v-list-item-title>Evan You</v-list-item-title>
         </v-list-item-content>
-
-        <v-row
-          align="center"
-          justify="end"
-        >
-		 <v-icon class="mr-1">
-            mdi-eye
-          </v-icon>
+        <v-row align="center"  justify="end">
+		 <v-icon class="mr-1">  mdi-eye  </v-icon>
           <span class="subheading mr-2">256</span>
 		   <span class="mr-1">·</span>
-          <v-icon class="mr-1">
-            mdi-heart
-          </v-icon>
+          <v-icon class="mr-1"> mdi-heart </v-icon>
           <span class="subheading mr-2">256</span>
           <span class="mr-1">·</span>
-          <v-icon class="mr-1">
-            mdi-share-variant
-          </v-icon>
+          <v-icon class="mr-1">   mdi-share-variant </v-icon>
           <span class="subheading">45</span>
         </v-row>
       </v-list-item>
     </v-card-actions>
           </v-card>
- 
-     	 <v-card color="white lighten-4" class="mb-3">
-            <div class="d-flex flex-no-wrap justify-space-between">
-				 <!-- <v-avatar
-                class="ma-3"
-                size="125"
-                tile
-              >
-                <v-img src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"></v-img>
-              </v-avatar> -->
-			  
-			  <v-card-text>
-			<div>Saturday, February 27, 2021</div>
-			<p class="display-1 text--primary">
-			Ultimate Cheatsheet Compilation
-			</p>
-			<p>You may find interesting facts, ideas, thoughts, and observations all day long and it's better to note them down as every thought is valuable. That's why we created this Notes Journal. This is a single list to add your points but what's interesting is a small enhancement that we added to it and that's MIND PALACE.</p>
-			<div class="text--primary">
-				<v-chip
-                    class="ml-2 mt-5"
-                    outlined
-                    rounded
-                    small
-                  >
-                    # START RADIO
-                  </v-chip>
-			</div>
-			</v-card-text>
-             
-            </div>
-			<v-divider></v-divider>
-               <v-card-actions>
-      <v-list-item class="grow">
-        <v-list-item-avatar color="grey darken-3">
-          <v-img
-            class="elevation-6"
-            alt=""
-            src="https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-          ></v-img>
-        </v-list-item-avatar>
-
-        <v-list-item-content>
-          <v-list-item-title>Evan You</v-list-item-title>
-        </v-list-item-content>
-
-        <v-row
-          align="center"
-          justify="end"
-        >
-		 <v-icon class="mr-1">
-            mdi-eye
-          </v-icon>
-          <span class="subheading mr-2">256</span>
-		   <span class="mr-1">·</span>
-          <v-icon class="mr-1">
-            mdi-heart
-          </v-icon>
-          <span class="subheading mr-2">256</span>
-          <span class="mr-1">·</span>
-          <v-icon class="mr-1">
-            mdi-share-variant
-          </v-icon>
-          <span class="subheading">45</span>
-        </v-row>
-      </v-list-item>
-    </v-card-actions>
-          </v-card>
-		 
-
+         <div class="text-center">
+                        <v-pagination
+                            v-model="filters.page"
+                            :length="pageCount"
+                            @input="$fetch"
+                        ></v-pagination>
+                    </div>
         </v-col>
 </v-row>
 </template>
 
-// <script>
-//   export default {
-//     data: () => ({
-//       items: [
-//         {
-//           color: '#1F7087',
-//           src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
-//           title: 'Supermodel',
-//           artist: 'Foster the People',
-//         },
-//         {
-//           color: '#952175',
-//           src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
-//           title: 'Halcyon Days',
-//           artist: 'Ellie Goulding',
-//         },
-//       ],
-//     }),
-//   }
-// </script>
+
 <script>
 export default {
 	components: {
@@ -187,7 +70,7 @@ export default {
 		dataList: [],
     filters:
         {
-            show:20,
+            show:1,
 			      page:1,
         },
 
@@ -220,16 +103,18 @@ export default {
 	},
 	
 	watch: {},
-	async  fetch () 
+	  async fetch () 
 		{
-			
+			console.log(1);
 			try 
 			{
+         console.log(1);
 				let { data } = await this.$axios({
 					method: "get",
 					url: "/blog",
            params: this.filters
 				});
+        console.log(data);
 				this.dataList = data.data;
         this.itemsPerPage=data.per_page;
         this.pageCount=data.last_page;
