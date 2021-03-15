@@ -1,7 +1,7 @@
 <template>
        <v-row >
         <v-col cols="12">
-			 <v-card color="white lighten-4" class="mb-3" v-for="(data,index) in dataList" :key="index">
+			 <v-card color="white lighten-4" class="elevation-5 mb-3" v-for="(data,index) in dataList" :key="index">
             <div class="d-flex flex-no-wrap justify-space-between">
 				      <v-avatar class="ma-3" size="125" tile v-if="data.image">
                 <v-img src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"></v-img>
@@ -14,7 +14,6 @@
 			<div class="text--primary">
 				<v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
 				<v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
-        <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
         <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
         <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
         <v-chip class="ml-2 mt-5" outlined rounded  small> # START RADIO</v-chip>
@@ -37,13 +36,13 @@
         </v-list-item-content>
         <v-row align="center"  justify="end">
 		 <v-icon class="mr-1">  mdi-eye  </v-icon>
-          <span class="subheading mr-2">256</span>
+          <span class="subheading mr-2">{{data.viewed}}</span>
 		   <span class="mr-1">·</span>
           <v-icon class="mr-1"> mdi-heart </v-icon>
-          <span class="subheading mr-2">256</span>
-          <span class="mr-1">·</span>
+          <span class="subheading mr-2">{{data.liked}}</span>
+          <!-- <span class="mr-1">·</span>
           <v-icon class="mr-1">   mdi-share-variant </v-icon>
-          <span class="subheading">45</span>
+          <span class="subheading">45</span> -->
         </v-row>
       </v-list-item>
     </v-card-actions>
@@ -52,6 +51,7 @@
                         <v-pagination
                             v-model="filters.page"
                             :length="pageCount"
+                             :total-visible="10"
                             @input="$fetch"
                         ></v-pagination>
                     </div>
@@ -70,8 +70,8 @@ export default {
 		dataList: [],
     filters:
         {
-            show:1,
-			      page:1,
+            show:2,
+			page:1,
         },
 
 	}),
@@ -105,7 +105,6 @@ export default {
 	watch: {},
 	  async fetch () 
 		{
-			console.log(1);
 			try 
 			{
          console.log(1);
@@ -114,7 +113,6 @@ export default {
 					url: "/blog",
            params: this.filters
 				});
-        console.log(data);
 				this.dataList = data.data;
         this.itemsPerPage=data.per_page;
         this.pageCount=data.last_page;
@@ -145,26 +143,7 @@ export default {
 			// this.getOrder();
 		},
 
-		async  getOrder()
-		{
-			// this.start();
-			try 
-			{
-				let { data } = await this.$axios({
-					method: "get",
-					url: "/posts",
-				});
-				this.dataList = data.data;
-			} 
-			catch (e) 
-			{
-				// this.fail();
-			}
-			finally
-			{
-				// this.finish();
-			}
-		},
+		
 	}
 };
 </script>
