@@ -4,14 +4,11 @@
   <v-card tile>
       <v-list nav dense>
        <v-subheader>Category</v-subheader>
-         <v-list-item-group
-        v-model="selectedItem"
-        color="primary"
-      >
+         <v-list-item-group v-model="selectedItem" color="primary">
           <v-list-item v-for="(data, index) in dataList" :key="index">
 
             <v-list-item-content>
-              <v-list-item-title >{{data.title}}</v-list-item-title>
+              <v-list-item-title @click="sendCategoryId(data)">{{data.title}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
          </v-list-item-group>
@@ -28,11 +25,11 @@ export default {
     selectedItem:null,
     itemsPerPage:1,
     pageCount:2,
-		dataList: [],
+	dataList: [],
     filters:
         {
             show:20,
-			      page:1,
+			page:1,
         },
 
 	}),
@@ -94,32 +91,9 @@ export default {
 	
 	
 	methods: {
-		
-
-		 initialize() 
+		sendCategoryId(data)
 		{
-			// this.getOrder();
-		},
-
-		async  getOrder()
-		{
-			// this.start();
-			try 
-			{
-				let { data } = await this.$axios({
-					method: "get",
-					url: "/posts",
-				});
-				this.dataList = data.data;
-			} 
-			catch (e) 
-			{
-				// this.fail();
-			}
-			finally
-			{
-				// this.finish();
-			}
+			 this.$emit('send', data)
 		},
 	}
 };

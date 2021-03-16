@@ -52,7 +52,7 @@
                             v-model="filters.page"
                             :length="pageCount"
                              :total-visible="10"
-                            @input="$fetch"
+                            @input="getfetch"
                         ></v-pagination>
                     </div>
         </v-col>
@@ -70,8 +70,9 @@ export default {
 		dataList: [],
     filters:
         {
-            show:2,
-			page:1,
+          show:3,
+			    page:1,
+          category_id:null,
         },
 
 	}),
@@ -92,18 +93,25 @@ export default {
 
 	props: 
 	{
-		source: String
+		category_id: ''
 	},
-
- 
 
 	computed: 
 	{
 		
 	},
 	
-	watch: {},
-	  async fetch () 
+	watch: 
+  {
+      '$route.query': '$fetch',
+
+      category_id()
+      {
+        this.getfetch();
+      }
+  },
+
+	async fetch () 
 		{
 			try 
 			{
@@ -142,6 +150,12 @@ export default {
 		{
 			// this.getOrder();
 		},
+
+    getfetch()
+    {
+        this.filters.category_id =this.category_id
+        this.$fetch()
+    }
 
 		
 	}
