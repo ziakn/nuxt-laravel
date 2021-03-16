@@ -2,6 +2,7 @@
        <v-row >
         <v-col cols="12">
 			 <v-card color="white lighten-4" class="elevation-5 mb-3" v-for="(data,index) in dataList" :key="index">
+          <NuxtLink :to="'/blog/' + data.id">
             <div class="d-flex flex-no-wrap justify-space-between">
 				      <v-avatar class="ma-3" size="125" tile v-if="data.image">
                 <v-img src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"></v-img>
@@ -46,6 +47,7 @@
         </v-row>
       </v-list-item>
     </v-card-actions>
+    </NuxtLink>
           </v-card>
          <div class="text-center">
                         <v-pagination
