@@ -8,7 +8,7 @@
         <v-col cols="12">
           <v-card  class="mx-auto">
             <v-card-title>{{dataList.title}}</v-card-title>
-            <quill-editor v-model="dataList.description" />
+            <v-card-text v-html="dataList.description" ></v-card-text>
           </v-card>
         </v-col>
       </v-row>
