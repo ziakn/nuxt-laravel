@@ -1,9 +1,9 @@
 <template>
 <div>
 <v-app-bar      color="white lighten-4"  app>
-      <v-toolbar-title class="ml-2">
-        Ze Zu Blog
-      </v-toolbar-title>
+      <v-toolbar-tile class="ml-2">
+       <NuxtLink style="text-decoration: none; color: inherit;" :to="'/'">zezublog</NuxtLink> 
+      </v-toolbar-tile>
         <v-text-field 
         class="ml-2"
         hide-details
