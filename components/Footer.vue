@@ -1,7 +1,7 @@
 <template>
   <v-footer
     color="primary lighten-1"
-    padless
+    app
   >
     <v-row
       justify="center"
@@ -21,7 +21,7 @@
         class="primary lighten-2 py-4 text-center white--text"
         cols="12"
       >
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        {{ new Date().getFullYear() }} — <strong>ZeZu</strong>
       </v-col>
     </v-row>
   </v-footer>

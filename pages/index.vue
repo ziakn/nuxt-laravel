@@ -1,7 +1,7 @@
 <template>
-      <v-container fluid>
+     
 		 <v-row justify="center">
-	<v-col sm="12" lg="2" md="2">
+	<v-col sm="12" lg="2" md="2" >
 		<Category  @send="getCategoryId"></Category>
         </v-col>
     	<v-col sm="12" lg="6" md="6">
@@ -10,15 +10,11 @@
 		<v-col sm="12" lg="2" md="2">
 		<Category  @send="getCategoryId"></Category>
         </v-col>
- </v-row>
-     </v-container>
+ </v-row> 
 </template>
 
 <script>
-import Category from '../components/Category.vue'
-import Listing from '../components/Listing.vue'
   export default {
-  components: { Listing, Category },
     data: () => ({
       category_id:null
     }),

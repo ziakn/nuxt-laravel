@@ -1,14 +1,12 @@
 <template>
   <v-app>
     <Header />
-  <v-main>
+    <v-main>
+ <v-container fluid>
+
       <Nuxt />
-  </v-main>
-<Footer/>
+ </v-container>
+    </v-main>
+    <Footer />
   </v-app>
 </template>
-<script>
-export default {}
-</script>
-
-<style></style>

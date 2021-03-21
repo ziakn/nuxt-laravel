@@ -1,6 +1,6 @@
 <template>
-  <v-row >
-  <v-col cols="12">
+  <v-row  >
+  <v-col cols="12" >
   <v-card tile>
       <v-list nav dense>
        <v-subheader>Category</v-subheader>
