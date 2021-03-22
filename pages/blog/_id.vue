@@ -22,7 +22,7 @@ export default {
   components: {},
   data: () => ({
     dataList: {
-      category_id:null
+      category_id: null,
     },
   }),
 
@@ -64,11 +64,10 @@ export default {
 
   methods: {
     initialize() {},
- getCategoryId(data)
-        {
-            this.category_id=data.id
-        }
+    getCategoryId(data) {
+      this.$store.commit('getCategoryId', data.id)
+      this.$router.push('/')
+    },
   },
-   
 }
 </script>

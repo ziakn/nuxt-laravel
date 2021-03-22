@@ -84,7 +84,6 @@
           </v-hover>
       
       </v-card>
-     </div>
       <div class="text-center">
         <v-pagination
           v-model="filters.page"
@@ -130,10 +129,12 @@ export default {
     category_id: '',
   },
 
-  computed: {},
+  computed: { 
+            
+            },
 
   watch: {
-    '$route.query': '$fetch',
+
 
     category_id() {
       this.getfetch()
@@ -142,7 +143,11 @@ export default {
 
   async fetch() {
     try {
-      console.log(1)
+      if(this.$store.state.category_id)
+      {
+         this.filters.category_id = this.$store.state.category_id
+      
+      }
       let { data } = await this.$axios({
         method: 'get',
         url: '/blog',
@@ -167,7 +172,11 @@ export default {
     },
 
     getfetch() {
-      this.filters.category_id = this.category_id
+      
+      
+          this.filters.category_id = this.category_id
+     
+      
       this.$fetch()
     },
   },
