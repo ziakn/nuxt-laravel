@@ -9,19 +9,20 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxt/components": "^1.2.5",
+    "@nuxt/components": "^1.2.6",
+    "@nuxt/ufo": "^0.5.4",
     "@nuxtjs/auth-next": "5.0.0-1611574754.9020f2a",
     "@nuxtjs/pwa": "^3.3.4",
-    "core-js": "^3.8.2",
-    "nuxt": "^2.14.12",
+    "core-js": "^3.20.3",
+    "nuxt": "^2.15.8",
     "nuxt-izitoast": "^1.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/axios": "^5.13.0",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/proxy": "^2.1.0",
-    "@nuxtjs/vuetify": "^1.11.3",
+    "@nuxtjs/vuetify": "^1.12.3",
     "eslint-config-prettier": "^7.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "eslint-plugin-prettier": "^3.4.1",
+    "prettier": "^2.5.1"
   }
 }

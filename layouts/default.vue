@@ -1,9 +1,8 @@
 <template>
   <v-app>
     <Header />
-    <v-main>
- <v-container fluid>
-
+   <v-main class="grey lighten-3">
+ <v-container>
       <Nuxt />
  </v-container>
     </v-main>

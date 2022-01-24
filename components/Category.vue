@@ -1,5 +1,5 @@
 <template>
-  <v-row  >
+  <!-- <v-row  >
   <v-col cols="12" >
   <v-card tile>
       <v-list nav dense>
@@ -15,7 +15,22 @@
       </v-list>
   </v-card>
         </v-col>
-  </v-row>
+  </v-row> -->
+   <v-col cols="12" sm="2">
+            <v-sheet rounded="lg" min-height="268">
+               <v-list nav dense>
+       <v-subheader>Category</v-subheader>
+         <v-list-item-group v-model="selectedItem" color="primary">
+          <v-list-item v-for="(data, index) in dataList" :key="index">
+
+            <v-list-item-content>
+              <v-list-item-title @click="sendCategoryId(data)"  color="grey darken-1">{{data.title}}</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+         </v-list-item-group>
+      </v-list>
+            </v-sheet>
+    </v-col>
 </template>
 <script>
 export default {
@@ -33,7 +48,7 @@ export default {
         },
 
 	}),
- 	
+
 	head() {
       return {
         title: 'zia description',
@@ -48,23 +63,23 @@ export default {
       }
     },
 
-	props: 
+	props:
 	{
 		source: String
 	},
 
- 
 
-	computed: 
+
+	computed:
 	{
-		
+
 	},
-	
+
 	watch: {},
-	async  fetch () 
+	async  fetch ()
 		{
-			
-			try 
+
+			try
 			{
 				let { data } = await this.$axios({
 					method: "get",
@@ -72,8 +87,8 @@ export default {
            params: this.filters
 				});
 				this.dataList = data.data;
-			} 
-			catch (e) 
+			}
+			catch (e)
 			{
 				// this.fail();
 			}
@@ -83,13 +98,13 @@ export default {
 			}
 		},
 
-	created() 
+	created()
 	{
-		
+
 	},
 
-	
-	
+
+
 	methods: {
 		sendCategoryId(data)
 		{
