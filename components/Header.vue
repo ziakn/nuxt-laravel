@@ -23,6 +23,12 @@
       color="white"
       flat
     >
+
+      <v-avatar
+        class="hidden-sm-and-down"
+        color="grey darken-1 shrink"
+        size="32"
+      ></v-avatar>
       <v-avatar
         :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'"
         size="32"
@@ -50,11 +56,6 @@
           ></v-text-field>
         </v-responsive>
 
-      <v-avatar
-        class="hidden-sm-and-down"
-        color="grey darken-1 shrink"
-        size="32"
-      ></v-avatar>
     </v-app-bar>
 </template>
 
@@ -65,9 +66,9 @@ export default {
   data: () => ({
     dataList: [],
     links: [
-        'Dashboard',
-        'Messages',
-        'Profile',
+        'Home',
+        'About Us',
+        'Contact Us',
         'Updates',
       ],
   }),

@@ -1,20 +1,9 @@
 <template>
-  <v-container fluid>
-    <v-row justify="center">
-      <v-col sm="12" lg="2" md="2">
-        <Category @send="getCategoryId"></Category>
-      </v-col>
-      <v-col sm="12" lg="6" md="6">
-        <v-card color="white lighten-4" class="elevation-5 mb-3">
-          <v-card-title>{{ dataList.title }}</v-card-title>
-          <v-card-text v-html="dataList.description"></v-card-text>
-        </v-card>
-      </v-col>
-      <v-col sm="12" lg="2" md="2">
-        <Category @send="getCategoryId"></Category>
-      </v-col>
-    </v-row>
-  </v-container>
+		 <v-row>
+		<Category  @send="getCategoryId"></Category>
+		<Listing :category_id="category_id"></Listing>
+		<Category  @send="getCategoryId"></Category>
+ </v-row>
 </template>
 
 <script>

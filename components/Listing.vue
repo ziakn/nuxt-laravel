@@ -99,14 +99,14 @@
   <v-col cols="12" sm="8">
             <v-sheet min-height="70vh" rounded="lg">
                <v-card
-        class=" mb-3"
+        class=" mb-5"
+        outlined
         v-for="(data, index) in dataList"
         :key="index"
       >
-          <v-hover>
-       <template v-slot:default="{ hover }">
+
  <div
-          :class="`elevation-${hover ? 12 : 5}`"
+
           class="mx-auto pa-6 transition-swing"
         >
         <NuxtLink
@@ -173,8 +173,6 @@
           </v-card-actions>
         </NuxtLink>
 </div>
-       </template>
-          </v-hover>
 
       </v-card>
       <div class="text-center">
@@ -257,7 +255,9 @@ export default {
     }
   },
 
-  created() {},
+  created() {
+
+  },
 
   methods: {
     initialize() {

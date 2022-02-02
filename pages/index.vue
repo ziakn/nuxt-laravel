@@ -1,5 +1,4 @@
 <template>
-
 		 <v-row>
 		<Category  @send="getCategoryId"></Category>
 		<Listing :category_id="category_id"></Listing>

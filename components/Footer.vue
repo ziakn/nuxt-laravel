@@ -1,5 +1,5 @@
 <template>
-  <v-footer
+  <!-- <v-footer
     color="primary lighten-1"
     app
   >
@@ -24,7 +24,7 @@
         {{ new Date().getFullYear() }} — <strong>ZeZu</strong>
       </v-col>
     </v-row>
-  </v-footer>
+  </v-footer> -->
 </template>
 <script>
   export default {
