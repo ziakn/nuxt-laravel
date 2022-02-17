@@ -77,7 +77,7 @@ auth: {
 },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
- baseURL: "http://localhost:8000/api",
+  baseURL: process.env.API_URL,
   credentials: true
 },
 

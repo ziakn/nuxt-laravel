@@ -180,7 +180,7 @@
           v-model="filters.page"
           :length="pageCount"
           :total-visible="10"
-          @input="getfetch"
+          @input="getBlog()"
         ></v-pagination>
       </div>
             </v-sheet>
@@ -195,6 +195,7 @@ export default {
     itemsPerPage: 1,
     pageCount: 2,
     dataList: [],
+    currentUrl:'',
     filters: {
       show: 3,
       page: 1,
@@ -226,52 +227,74 @@ export default {
 
   watch: {
 
-
-    category_id() {
-      this.getfetch()
-    },
+  },
+  activated() {
+    // Call fetch again if last fetch more than a minute ago
+    // if (this.$fetchState.timestamp <= Date.now() - 15000) {
+    //   this.$fetch()
+    // }
   },
 
-  async fetch() {
-    try {
-      if(this.$store.state.category_id)
-      {
-         this.filters.category_id = this.$store.state.category_id
+async fetch(){
+        try {
 
-      }
-      let { data } = await this.$axios({
-        method: 'get',
-        url: '/blog',
-        params: this.filters,
-      })
-      this.dataList = data.data
-      this.itemsPerPage = data.per_page
-      this.pageCount = data.last_page
-      this.filters.page = data.current_page
-    } catch (e) {
-      // this.fail();
-    } finally {
-      // this.finish();
-    }
-  },
+
+// console.log(this.$route.params.number);
+            // const queryString = window.location.search;
+            // console.log(queryString);
+            // const urlParams = new URLSearchParams(queryString);
+            // const page = urlParams.get('page')
+            // this.filters.page = parseInt(page);
+            // console.log(this.filters.page);
+            // console.log(this.filters.page);
+            this.filters.page= parseInt(this.$route.params.number);
+
+          let { data } = await this.$axios({
+              method: "get",
+              url: "/blog",
+              params: this.filters
+            });
+          this.dataList = data.data
+          this.itemsPerPage = data.per_page
+          this.pageCount = data.last_page
+          this.filters.page = data.current_page
+        } catch (e) {
+          // this.fail();
+        } finally {
+          // this.finish();
+        }
+      },
 
   created() {
-
+ this.initialize()
   },
+
 
   methods: {
     initialize() {
-      // this.getOrder();
+
+
     },
-
-    getfetch() {
-
-
-          this.filters.category_id = this.category_id
+     async getBlog(){
 
 
-      this.$fetch()
-    },
+       this.$router.push('/pages/'+this.filters.page);
+        this.$fetch();
+      },
+
+      checkURLParams()
+      {
+            history.replaceState({}, null, '/?page='+this.filters.page)
+
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const page = urlParams.get('page')
+            this.filters.page = parseInt(page);
+            console.log(this.filters.page);
+
+
+      },
   },
 }
 </script>

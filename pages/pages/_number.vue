@@ -1,7 +1,5 @@
 <template>
-
 		<Listing :category_id="category_id"></Listing>
-
 </template>
 
 <script>
