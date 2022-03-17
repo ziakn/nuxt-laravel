@@ -1,24 +1,21 @@
-import Vue from 'vue';
-import Vuex from "vuex";
+export const state = () => ({
+  categoryIds: Object
+})
 
-Vue.use(Vuex);
+export const mutations = {
+  STORE_CATEGORY_IDS(state, categoryId) {
+    state.categoryIds = categoryId
+  }
+}
 
-import state from "./state";
-import * as getters from './getters';
-import * as mutations from "./mutations";
-import * as actions from "./actions";
+export const actions = {
+  storeCategoryId({commit}, categoryId) {
+    commit('STORE_CATEGORY_IDS', categoryId)
+  }
+}
 
-import product from "./modules/product";
-import cart from "./modules/cart";
-
-export default new Vuex.Store({
-    state,
-    getters,
-    mutations,
-    actions,
-
-    modules: {
-        product,
-        cart
-    }
-});
+export const getters = {
+  getCategoryId(state) {
+    return state.categoryIds
+  }
+}

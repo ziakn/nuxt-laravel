@@ -23,6 +23,7 @@
         getCategoryId(data)
         {
             this.category_id=data.id
+            store.dispatch('storeJobIds', data.id)
         }
      }
   }

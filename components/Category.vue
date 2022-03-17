@@ -17,7 +17,7 @@
         </v-col>
   </v-row> -->
    <v-col cols="12" sm="2">
-            <v-sheet rounded="lg" min-height="268" >
+            <v-sheet rounded="lg" min-height="30vh" >
                <v-list nav dense>
        <v-subheader>Category</v-subheader>
          <v-list-item-group v-model="selectedItem" color="primary">
@@ -108,7 +108,8 @@ export default {
 	methods: {
 		sendCategoryId(data)
 		{
-			 this.$emit('send', data)
+      console.log(data.id);
+			 this.$store.dispatch('storeCategoryId', data)
 		},
 	}
 };
