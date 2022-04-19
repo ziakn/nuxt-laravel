@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" sm="8">
-    <v-sheet min-height="30vh" rounded="lg">
-      <div v-html="dataList.description"></div>
+    <v-sheet min-height="30vh" rounded="lg" >
+      <div v-html="dataList.description" class="pa-10"></div>
     </v-sheet>
   </v-col>
 </template>

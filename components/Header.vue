@@ -38,12 +38,15 @@
         centered
         class="ml-n9"
         color="grey darken-1"
+
       >
         <v-tab
           v-for="link in links"
           :key="link"
         >
+        <nuxt-link style="text-decoration: none; color: inherit" :to="'/'">
           {{ link }}
+          </nuxt-link>
         </v-tab>
       </v-tabs>
        <v-responsive max-width="260">
